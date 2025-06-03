@@ -1021,7 +1021,12 @@ body .elementor-16519 .elementor-element.elementor-element-3cab00c7 .elementor-l
  }
 
 
-
+.watsup-class:hover{
+    color: green;
+}
+.insta-class:hover{
+    color: rgb(126, 0, 128);
+}
 .elementor-16519 .elementor-element.elementor-element-428fb1b0 {
     border-style: solid;
     border-width: 1px 0px 0px 0px;

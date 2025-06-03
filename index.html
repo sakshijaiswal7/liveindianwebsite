@@ -2073,7 +2073,7 @@
 
                                                                     <div class="text-with-icon-body">
 
-                                                                        <b> 13+ Years in International Real Estate</b>
+                                                                        <b>  <span class="timer counter-number" data-to="13" data-speed="1500">0</span>+ Years in International Real Estate</b>
                                                                     </div><!-- text-with-icon-body -->
                                                                 </div><!-- text-with-icon-info -->
 
@@ -2089,7 +2089,7 @@
 
                                                                     <div class="text-with-icon-body">
 
-                                                                        <b> 200+ Happy & satisfied Clients </b>
+                                                                        <b>  <span class="timer counter-number" data-to="200" data-speed="1500">0</span>+ Happy & satisfied Clients </b>
                                                                     </div>
                                                                     <!-- text-with-icon-body -->
                                                                 </div><!-- text-with-icon-info -->
@@ -2106,7 +2106,7 @@
 
                                                                     <div class="text-with-icon-body">
 
-                                                                        <b> 10+ Property Events across India & Dubai
+                                                                        <b>  <span class="timer counter-number" data-to="10" data-speed="1500">0</span>+ Property Events across India & Dubai
                                                                         </b>
 
                                                                     </div><!-- text-with-icon-body -->
@@ -3594,36 +3594,31 @@
 
 
                         <span>
-                            <a class="btn-facebook" target="_blank" href="#">
+                            <a class="btn-facebook" target="_blank" href="https://www.facebook.com/people/Inchbrickofficial/61553917834438/">
                                 <i class="fab fa-facebook-f mr-2"></i>
                             </a>
                         </span>
 
                         <span>
                             <a class="btn-twitter" target="_blank" href="#">
-                                <i class="fab fa-twitter mr-2"></i>
-                            </a>
-                        </span>
+                                
+                              <!-- WhatsApp Icon 1 -->
+<i class="fab fa-whatsapp mr-2 watsup-class"></i>
 
 
 
-
-
-                        <span>
-                            <a class="btn-googleplus" target="_blank" href="https://google.com">
-                                <i class="fab fa-google-plus-g mr-2"></i>
                             </a>
                         </span>
 
                         <span>
-                            <a class="btn-linkedin" target="_blank" href="#">
+                            <a class="btn-linkedin" target="_blank" href="https://www.linkedin.com/company/inchbrickofficial/posts/?feedView=all">
                                 <i class="fab fa-linkedin-in mr-2"></i>
                             </a>
                         </span>
 
                         <span>
-                            <a class="btn-instagram" target="_blank" href="#">
-                                <i class="fab fa-instagram mr-2"></i>
+                            <a class="btn-instagram" target="_blank" href="https://www.instagram.com/inchbrickofficial/">
+                                <i class="fab fa-instagram mr-2 insta-class"></i>
                             </a>
                         </span>
 
@@ -3794,6 +3789,32 @@
             });
         });
     </script>
+
+     <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter-number");
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-to");
+      const speed = +counter.getAttribute("data-speed");
+
+      let count = 0;
+      const step = target / (speed / 10); // increment step based on speed
+
+      const updateCounter = () => {
+        count += step;
+        if (count < target) {
+          counter.innerText = Math.ceil(count);
+          setTimeout(updateCounter, 10); // run every 10ms
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCounter();
+    });
+  });
+</script>
     <script>(function () {
             function maybePrefixUrlField() {
                 const value = this.value.trim()
